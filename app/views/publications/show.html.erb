@@ -1,3 +1,16 @@
 <h1><%= @publication.title %></h1>
 
 <p><%= @publication.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_publication_path(@publication) %></li>
+  <li><%= link_to "Destroy", publication_path(@publication),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<h2>Comments</h2>
+<%= render @publication.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form"%>

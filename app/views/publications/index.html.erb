@@ -1,13 +1,14 @@
 <h1>Publications</h1>
 
+Our blog has **<%= Publication.public_count%>** articles and counting!
 <ul>
-  
   <% @publications.each do |publication| %>
-    <li>
-      <a href="/publications/<%= publication.id %>">
-        <%= publication.title %>
-      </a>
-    </li>
+    <% unless publication.archived? %>
+      <li>
+        <%= link_to publication.title, publication %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
+<%= link_to "New Publication", new_publication_path %>
