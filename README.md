@@ -1,5 +1,9 @@
 # README
 
+**IMPORTANT NOTE**
+This project do not use "article" resource as the getting started guide. Use instead "publication" resource.
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
